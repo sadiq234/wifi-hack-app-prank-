@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Wifi Hacking</title>
+        <style>
+           body {
+    background-color:black;
+    color:lightblue;
+    font-family:Courier New;
+    font-size:30px;
+}
+            
+        </style>
+    </head>
+    <body>
+        <progress id="prog" max="100" value="0"></progress>
+        <output id="out">0</output>%
+        <div id="div"></div>
+        <script>
+            window.onload=function(){
+    var p=document.getElementById("prog");
+    var o=document.getElementById("out");
+    var d=document.getElementById("div");
+    var i=1;
+    var wifi=prompt("Enter the name of the wifi")
+    var letter=["@","&","1","9","?","²&","A","B","a","k","7","#","c","b","3","2","4¥"];
+var a1=Math.floor(Math.random()*letter.length);
+var a2=Math.floor(Math.random()*letter.length);
+var a3=Math.floor(Math.random()*letter.length);
+var a4=Math.floor(Math.random()*letter.length);
+var a5=Math.floor(Math.random()*letter.length);
+var a6=Math.floor(Math.random()*letter.length);
+    var passw=letter[a1]+letter[a2]+letter[a3]+letter[a4]+letter[a5]+letter[a6]
+    var myint=setInterval(function(){
+        p.value=i;
+        o.value=i;
+        i++;
+        if(i>0 && i<=10){
+            d.innerHTML="Obtaining informations"
+        }
+         if(i>10 && i<=15){
+             d.innerHTML="Informations obtained "
+         }
+         if(i>15 && i<=27){
+         d.innerHTML="Getting IP address "
+         }
+         if(i>27 && i<=39){
+             d.innerHTML="Patch%IP "
+         }
+         if(i>40 && i<=45){
+             d.innerHTML="Connect old ID Device "        
+              }
+         if(i>45 && i<=55){
+           d.innerHTML="Failed.. " 
+         }
+         if(i>55 && i<=65){
+            d.innerHTML="Reconnection.. "
+         }
+         if(i>65 && i<=77){
+             d.innerHTML="Connected "
+         }
+         if(i>80 && i<=87){
+             d.innerHTML="Getting Password "
+         }
+         if(i>87 && i<=88){
+             d.innerHTML="Wait. "
+         }
+         if(i>88 && i<=89){
+             d.innerHTML="Wait.. "
+         }
+         if(i>88 && i<=90){
+             d.innerHTML="Wait... "
+         }
+         if(i>90 && i<=93){
+             d.innerHTML="Obtained ! "
+         }
+         if(i>93 && i<=100){
+             d.innerHTML="Finish "
+             
+         }
+         if(i==101){
+             clearInterval(myint );
+             d.innerHTML="Wifi-name : "+wifi+"<br>"+"Wifi-password : "+passw
+         }
+        
+    }, 100)
+}
+            
+            
+        </script>
+    </body>
+</html>
